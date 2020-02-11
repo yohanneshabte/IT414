@@ -1,0 +1,14 @@
+Anthony E, Jeffreyy X.,Yohannes H.
+
+
+1)Does not follow single responsiblity principle. The Quiz class is responsible for almost everything involved in the program, and contains all the functions for formating and presenting the questions.
+
+2)The QuizQuestions class currently can only have 4 answers, no more, no less. Currently, it wouldn't be possible to implement a question with more or less answers.
+
+3)The TrueFalseQuestions class violates liscofs principle, since it is inheriting from quizquestions but does not utilize the class correctly. They should be refactored into a base question class and then create a multiple choice class and a true and false class.
+
+4)The Format Function tries to access answer3 & answer4, but when it encounters a trueFalseQuestion, it breaks because they do not contain those. The question classes should be reformated to contain questions in a list so all the format function has to do is go through the list. This way it can allow questions of all sizes.
+
+5)The CorrectAnswer currently takes a string, so if answers are changed later on, the correct answer will remain the same. Instead it should reference the correct answer directly and grab the string from that.
+
+6)An Interface should be implemented for adding questions into ther quiz instead of questions being added directly though code. Perhaps a function that will construct a list of questions of a requested size, and then the user goes through the list defining the type of question, the question string, number of answers, and then answer strings.
