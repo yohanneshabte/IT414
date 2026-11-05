@@ -1,4 +1,4 @@
-Anthony E, Jeffreyy X.,Yohannes H.
+<CLASSMATE_NAME>, <CLASSMATE_NAME>,<OWNER_NAME>
 
 
 1)Does not follow single responsiblity principle. The Quiz class is responsible for almost everything involved in the program, and contains all the functions for formating and presenting the questions.
